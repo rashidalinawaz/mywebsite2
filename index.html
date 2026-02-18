@@ -1,22 +1,120 @@
-<!-- Hero Section -->
-<section id="home" class="bg-gradient-to-r from-gray-100 to-gray-50 py-32 text-center">
-  <!-- Logo -->
-  <h1 class="text-5xl md:text-6xl font-bold mb-6" style="font-family: 'Audiowide', cursive; color: #1F2937;">
-    Rashid & Co.
-  </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rashid & Co. | Law Offices</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Audiowide -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800">
 
-  <!-- Tagline -->
-  <p class="text-lg md:text-xl mb-8 text-gray-700 max-w-2xl mx-auto">
-    Trusted Legal Solutions for Corporate, Family, and Criminal Law.
-  </p>
+  <!-- Header -->
+  <header class="bg-gray-900 text-white sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl md:text-3xl font-bold" style="font-family: 'Audiowide', cursive;">
+        Rashid & Co.
+      </h1>
+      <nav class="space-x-6">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#about" class="hover:text-gray-300">About</a>
+        <a href="#services" class="hover:text-gray-300">Practice Areas</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Call-to-Action -->
-  <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
-    Schedule a Consultation
-  </a>
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-gray-100 to-gray-50 py-32 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6" style="font-family: 'Audiowide', cursive; color: #1F2937;">
+      Rashid & Co.
+    </h1>
+    <p class="text-lg md:text-xl mb-8 text-gray-700 max-w-2xl mx-auto">
+      Trusted Legal Solutions for Corporate, Family, and Criminal Law.
+    </p>
+    <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+      Schedule a Consultation
+    </a>
+    <div class="mt-12">
+      <img src="https://via.placeholder.com/800x400" alt="Lawyer Illustration" class="mx-auto rounded shadow-lg">
+    </div>
+  </section>
 
-  <!-- Optional Background Image -->
-  <div class="mt-12">
-    <img src="https://via.placeholder.com/800x400" alt="Lawyer Illustration" class="mx-auto rounded shadow-lg">
-  </div>
-</section>
+  <!-- About Section -->
+  <section id="about" class="py-20 container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center md:space-x-10">
+      <img src="https://via.placeholder.com/300" alt="Lawyer Photo" class="rounded-lg mb-6 md:mb-0 shadow-lg">
+      <p class="text-lg">
+        Rashid & Co. is a seasoned law firm with extensive experience in corporate, family, and criminal law. 
+        Our mission is to provide professional, trustworthy legal services and advocate for our clients’ rights with dedication and integrity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section id="services" class="bg-gray-50 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Practice Areas</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">Corporate Law</h3>
+          <p>Business contracts, company formation, mergers & acquisitions, and corporate compliance.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">Family Law</h3>
+          <p>Divorce, child custody, adoption, and domestic relations matters.</p>
+        </div>
+        <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">Criminal Defense</h3>
+          <p>Representation in criminal cases from consultation to court proceedings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">What Clients Say</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+        <p class="mb-4">“Rashid & Co. provided excellent legal advice and handled my case with utmost professionalism.”</p>
+        <span class="font-semibold">— Ali R.</span>
+      </div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+        <p class="mb-4">“Highly recommend for anyone needing corporate law guidance. Very responsive and knowledgeable.”</p>
+        <span class="font-semibold">— Sana K.</span>
+      </div>
+      <div class="p-6 bg-white rounded shadow hover:shadow-lg transition">
+        <p class="mb-4">“Their support during my family law case was compassionate and effective. Truly trustworthy.”</p>
+        <span class="font-semibold">— Ahmed M.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <p class="mb-8 text-gray-700">Schedule your consultation today. Fill out the form below or reach out directly.</p>
+      <form class="max-w-lg mx-auto space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded">
+        <textarea placeholder="Message" class="w-full p-3 border rounded h-32"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+          Send Message
+        </button>
+      </form>
+      <p class="mt-6 text-gray-600">Phone: +92 300 1234567 | Email: info@rashidco.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2026 Rashid & Co. Law Offices. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
