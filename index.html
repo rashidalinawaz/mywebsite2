@@ -8,273 +8,299 @@
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
-    --primary:#00211d;
-    --accent:#B3812A;
-    --light:#ffffff;
-    --soft:#0a4a45;
+--primary:#00211d;
+--accent:#B3812A;
+--light:#ffffff;
+--soft:#063a34;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:var(--primary);
-    color:var(--light);
-    line-height:1.7;
+font-family:'Poppins',sans-serif;
+background:var(--primary);
+color:var(--light);
+line-height:1.7;
 }
 
-/* HEADER */
+/* GOLD ANIMATED TOP LINE */
+.gold-line{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg, transparent, #B3812A, transparent);
+background-size:200% 100%;
+animation:goldFlow 3s linear infinite;
+z-index:2000;
+}
+
+@keyframes goldFlow{
+0%{background-position:200% 0;}
+100%{background-position:-200% 0;}
+}
+
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 10%;
-    position:fixed;
-    width:100%;
-    background:rgba(3,49,46,0.95);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid rgba(179,129,42,0.3);
-    z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+position:fixed;
+width:100%;
+top:3px;
+background:rgba(0,33,29,0.95);
+backdrop-filter:blur(8px);
+z-index:1000;
 }
 
 .logo{
-    font-family:'Audiowide';
-    color:var(--accent);
-    font-size:20px;
-    letter-spacing:2px;
-    text-transform:lowercase;
+font-family:'Audiowide';
+color:var(--accent);
+font-size:20px;
+letter-spacing:2px;
+text-transform:lowercase;
 }
 
 nav a{
-    color:var(--light);
-    text-decoration:none;
-    margin-left:30px;
-    font-size:14px;
-    position:relative;
-    transition:0.3s;
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
 }
 
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:var(--accent);
-    transition:0.3s;
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* HERO */
 .hero{
-    padding:180px 10% 120px;
-    text-align:center;
-    animation:fadeUp 1.2s ease;
+padding:200px 10% 120px;
+text-align:center;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:20px;
-}
+.hero h1{font-size:48px;margin-bottom:20px;}
+.hero span{color:var(--accent);}
 
-.hero span{
-    color:var(--accent);
-}
-
-.hero p{
-    max-width:750px;
-    margin:auto;
-    opacity:0.9;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:14px 40px;
-    background:var(--accent);
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:600;
-    border-radius:30px;
-    transition:0.4s;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(179,129,42,0.3);
-}
-
-/* SECTION */
-.section{
-    padding:100px 10%;
-}
+.section{padding:100px 10%;}
 
 .section h2{
-    text-align:center;
-    margin-bottom:60px;
-    color:var(--accent);
-    font-size:32px;
+text-align:center;
+margin-bottom:50px;
+color:var(--accent);
 }
 
-/* SERVICES */
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+/* STATISTICS */
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+text-align:center;
 }
 
-.card{
-    background:var(--soft);
-    padding:35px;
-    border-radius:12px;
-    transition:0.4s;
-    opacity:0;
-    transform:translateY(30px);
+.stat h3{
+font-size:40px;
+color:var(--accent);
 }
 
-.card.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+.stat p{
+font-size:14px;
+opacity:0.8;
 }
 
 /* BLOG */
 .blog-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.blog-post{
-    background:var(--soft);
-    padding:30px;
-    border-radius:12px;
-    transition:0.4s;
+.card{
+background:var(--soft);
+padding:30px;
+border-radius:12px;
 }
 
-.blog-post:hover{
-    transform:scale(1.03);
+/* ADMIN DASHBOARD */
+#adminPanel{
+display:none;
+background:#011a17;
+padding:40px;
+margin-top:40px;
+border-radius:10px;
 }
 
-.blog-post h3{
-    color:var(--accent);
-    margin-bottom:10px;
+input, textarea{
+padding:10px;
+width:100%;
+margin-bottom:10px;
+border:none;
+border-radius:5px;
 }
 
-/* CONTACT */
-.contact{
-    text-align:center;
+button{
+padding:10px 15px;
+border:none;
+background:var(--accent);
+color:var(--primary);
+font-weight:bold;
+cursor:pointer;
+border-radius:5px;
 }
 
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(179,129,42,0.3);
-    font-size:14px;
-    opacity:0.8;
+/* WhatsApp */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
-}
+footer{text-align:center;padding:30px;margin-top:40px;}
 
 </style>
 </head>
+
 <body>
 
+<div class="gold-line"></div>
+
 <header>
-    <div class="logo">rashid & co.</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#services">Practice Areas</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="logo">rashid & co.</div>
+<nav>
+<a href="#">Home</a>
+<a href="#stats">Profile</a>
+<a href="#blog">Blog</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Strategic <span>Legal Advocacy</span></h1>
-    <p>We are providing services in Taxation and civil legal matters. Our mission is to provide professional, trustworthy legal services and advocate for our clients’ rights with dedication and integrity..</p>
-    <a href="#contact" class="btn">Schedule Consultation</a>
+<h1>Strategic <span>Legal Advocacy</span></h1>
+<p>Precision. Integrity. Litigation Excellence.</p>
 </section>
 
-<section class="section" id="services">
-    <h2>Practice Areas</h2>
-    <div class="services">
-        <div class="card"> <h3>Civil Litigation</h3> <p>Property disputes, recovery suits, injunctions and appellate practice.</p> </div>
-        <div class="card"> <h3>Corporate Law</h3> <p>Company structuring, compliance, contracts and advisory services.</p> </div>
-        <div class="card"> <h3>Taxation Law</h3> <p>Income tax, sales tax, wealth statements and tribunal representation.</p> </div>
-        <div class="card"> <h3>Constitutional Petitions</h3> <p>High Court writs and constitutional remedies.</p> </div>
-    </div>
+<section class="section" id="stats">
+<h2>Firm Overview</h2>
+<div class="stats">
+<div class="stat">
+<h3 data-target="15">0</h3>
+<p>Years Experience</p>
+</div>
+<div class="stat">
+<h3 data-target="320">0</h3>
+<p>Cases Handled</p>
+</div>
+<div class="stat">
+<h3 data-target="98">0</h3>
+<p>Success Rate %</p>
+</div>
+</div>
 </section>
 
 <section class="section" id="blog">
-    <h2>Legal Updates & Insights</h2>
-    <div class="blog-container">
+<h2>Legal Updates</h2>
+<div class="blog-container" id="blogPosts"></div>
 
-        <!-- BLOG POST 1 -->
-        <div class="blog-post">
-            <h3>Finance Bill 2025 – Key Amendments</h3>
-            <p>Overview of major changes affecting non-resident taxpayers and corporate compliance requirements.</p>
-        </div>
+<div style="text-align:center;margin-top:30px;">
+<button onclick="showLogin()">Admin Login</button>
+</div>
 
-        <!-- BLOG POST 2 -->
-        <div class="blog-post">
-            <h3>New Wealth Statement Reporting Rules</h3>
-            <p>Understanding fair market value determination and compliance obligations under current regulations.</p>
-        </div>
+<div id="adminPanel">
+<h3>Add New Post</h3>
+<input type="text" id="postTitle" placeholder="Post Title">
+<textarea id="postContent" rows="5" placeholder="Post Content"></textarea>
+<button onclick="addPost()">Publish</button>
+<button onclick="logout()">Logout</button>
+</div>
 
-        <!-- TO ADD NEW BLOG POSTS:
-             Copy a blog-post div and edit title + text.
-             No coding knowledge required. -->
-
-    </div>
 </section>
 
-<section class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: contact@rashidandcompany.com</p>
-    <p>Phone Office: +92-0543-543608</p>
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p style="text-align:center;">Email: your-email@example.com</p>
 </section>
 
 <footer>
-© 2026 Rashid & Co. All Rights Reserved.
+© 2026 Rashid & Co.
 </footer>
+
+<a class="whatsapp" href="https://wa.me/923XXXXXXXXX" target="_blank">
+WhatsApp
+</a>
 
 <script>
 
-/* Subtle Scroll Animation */
-const cards = document.querySelectorAll('.card');
+/* STAT COUNTER */
+const counters = document.querySelectorAll('.stat h3');
+const speed = 200;
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-}, {threshold:0.2});
-
-cards.forEach(card => {
-    observer.observe(card);
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+const counter = entry.target;
+const update = ()=>{
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const inc = target / speed;
+if(count < target){
+counter.innerText = Math.ceil(count + inc);
+setTimeout(update, 10);
+}else{
+counter.innerText = target;
+}
+};
+update();
+}
 });
+},{threshold:0.5});
+
+counters.forEach(counter=>observer.observe(counter));
+
+/* BLOG SYSTEM */
+let posts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+function displayPosts(){
+const container = document.getElementById("blogPosts");
+container.innerHTML="";
+posts.forEach(post=>{
+container.innerHTML+=`
+<div class="card">
+<h3>${post.title}</h3>
+<p>${post.content}</p>
+</div>`;
+});
+}
+displayPosts();
+
+/* AUTH SYSTEM */
+const adminUser = "admin";
+const adminPass = "Rashid@2026";
+
+function showLogin(){
+let user = prompt("Username:");
+let pass = prompt("Password:");
+if(user===adminUser && pass===adminPass){
+document.getElementById("adminPanel").style.display="block";
+}else{
+alert("Access Denied");
+}
+}
+
+function addPost(){
+let title = document.getElementById("postTitle").value;
+let content = document.getElementById("postContent").value;
+posts.unshift({title,content});
+localStorage.setItem("blogPosts",JSON.stringify(posts));
+displayPosts();
+alert("Post Published");
+}
+
+function logout(){
+document.getElementById("adminPanel").style.display="none";
+}
 
 </script>
 
